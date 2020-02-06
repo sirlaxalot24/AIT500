@@ -13,6 +13,10 @@ public class Person {
         return name; // return the value of the name
     }
 
-    Person name = new setName("John");
-
 };
+
+public static void setClass(String[] args) {
+    
+    Person newPerson = new Person();
+
+}
