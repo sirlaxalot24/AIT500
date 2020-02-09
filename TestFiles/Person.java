@@ -2,7 +2,7 @@
 
 public class Person {
     private String name;
-    
+
     // method to set the name in the employee object
     public void setName(String name) {
         this.name = name; //store the name
@@ -13,10 +13,17 @@ public class Person {
         return name; // return the value of the name
     }
 
+    public Person(String john) {
+
+
+        Person myName = new Person("John");
+
+        Account newAccount = new Account();
+
+
+        System.out.println(myName);
+    }
+
 };
 
-public static void setClass(String[] args) {
-    
-    Person newPerson = new Person();
 
-}
