@@ -14,6 +14,12 @@ public class Employee {
 	public String getFirstName() {
 		return firstName;
 	}
-	
+
 	// create the other two get methods
+	public String getLastName() {
+		return lastName;
+	}
+	public double getMonthlySalary() {
+		return monthlySalary;
+	}
 }

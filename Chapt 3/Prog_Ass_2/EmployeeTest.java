@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EmployeeTest {
@@ -22,7 +23,20 @@ public class EmployeeTest {
 		// create the Employee object
 		System.out.print("Enter employee two's first name: ");
 		firstName = input.nextLine();
+		System.out.print("Enter employee two's last name: ");
+		lastName = input.nextLine();
+		System.out.print("Enter employee two's monthly salary: ");
+		monthlySalary = input.nextDouble();
+		// Create the object
+		Employee employeeTwo = new Employee(firstName, lastName, monthlySalary);
 		
-		// Display results
+		//Print employeeOne and employeeTwo information
+		System.out.println("Employee One's First Name = " + employeeOne.getFirstName());
+		System.out.println("Employee One's Last Name = " + employeeOne.getLastName());
+		System.out.println("Employee One's Monthly Salary = " + employeeOne.getMonthlySalary());
+		System.out.println("");
+		System.out.println("Employee Two's First Name = " + employeeTwo.getFirstName());
+		System.out.println("Employee Two's Last Name = " + employeeTwo.getLastName());
+		System.out.println("Employee Two's Monthly Salary = " + employeeTwo.getMonthlySalary());
 	}
 }
