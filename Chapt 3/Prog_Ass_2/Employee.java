@@ -6,9 +6,14 @@ public class Employee {
 	public Employee(String firstName, String lastName, double monthlySalary) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		
+
 		// Update the code to ensure this.monthlySalary is always positive
-		this.monthlySalary = monthlySalary;
+		if (this.monthlySalary > 0) {
+			this.monthlySalary = monthlySalary;
+		}else {
+			System.out.println("Please start the program again and enter a value larger than 0");
+			System.exit(0);
+		}
 	}
 	
 	public String getFirstName() {
