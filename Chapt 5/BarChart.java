@@ -8,7 +8,10 @@ public class BarChart {
     public void displayBar() {
 
         // Create a loop to execute the following statement this.numberOfStars times
-        System.out.print("*");
+        for (int i = 0; i < numberOfStars; i++) {
+            System.out.print("*");    
+        }
+        
 
         // After the loop
         System.out.println();
