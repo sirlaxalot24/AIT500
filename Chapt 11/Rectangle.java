@@ -1,51 +1,40 @@
 public class Rectangle {
-
     private double width;
     private double height;
 
-    public Rectangle(double width, double height) {
-        if (width > 0.0 && width <= 20.0) {
-            this.width = width;
-        } else {
-            throw new IllegalArgumentException("width is out of range");
+    public Rectangle(double width, double height){
+        if(width <= 0 || width > 20 || height <= 0 || height > 20){
+            throw new IllegalArgumentException(
+                "Width or Height must be larger than zero and less than or equal to 20");
         }
+        
+        this.width = width;
+        this.height = height;
+    }    
 
-        if (height > 0.0 && height <= 20.0) {
-            this.height = height;
-        } else {
-            throw new IllegalArgumentException("height is out of range");
+    public void setParams(double width, double height){
+        if(width <= 0 || width > 20 || height <= 0 || height > 20){
+            throw new IllegalArgumentException(
+                "Width or Heigh must be larger than zero and less than or equal to 20");
         }
+        this.width = width;
+        this.height = height;
     }
 
-    public double getWidth() {
+    public double getWidth(){
         return width;
     }
 
-    public double getHeight() {
+    public double getHeight(){
         return height;
     }
 
-    public void setWidth(double width) {
-        if (width > 0.00 && width <= 20.0) {
-            this.width = width;
-        } else {
-            throw new IllegalArgumentException("width is out of range");
-        }
+    public double calcPerimeter(){
+        return (width * 2) + (height * 2);
     }
 
-    public void setHeight(double height) {
-        if (height > 0.0 && height <= 20.0) {
-            this.height = height;
-        } else {
-            throw new IllegalArgumentException("height is out of range");
-        }
+    public double calcArea(){
+        return width * height;
     }
 
-    public double calculatePerimeter() {
-        return this.width * 2 + this.height * 2;
-    }
-
-    public double calculateArea() {
-        return this.width * this.height;
-    }
 }
