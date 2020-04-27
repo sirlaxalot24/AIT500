@@ -1,16 +1,38 @@
-public class RectangleSortTest.java
+import java.util.*;
+
+public class RectangleSortTest{
 
     public static void main(String [] args) {
-            
-        // Test to see if class is working correctly
-        Rectangle recTest1 = new Rectangle(10, 15);
-        System.out.println("Rectangle 1 :::::::::::::::");
-        System.out.println("Area: " + recTest1.calcArea());
+             
+        List<Rectangle> rectList = new ArrayList<>();
+        Rectangle rectTest1 = new Rectangle(10, 15);
+        Rectangle rectTest2 = new Rectangle(9, 15);
+        Rectangle rectTest3 = new Rectangle(11, 15);
+        Rectangle rectTest4 = new Rectangle(8, 15);
+        Rectangle rectTest5 = new Rectangle(12, 15);
+        rectList.add(rectTest1);
+        rectList.add(rectTest2);
+        rectList.add(rectTest3);
+        rectList.add(rectTest4);
+        rectList.add(rectTest5);
 
-        Rectangle rectTest2 = new Rectangle(11, 15);
-        System.out.println("Rectangle 2 :::::::::::::::");
-        System.out.println("Area: " + rectTest2.calcArea());
 
-        System.out.println(recTest1.area.compareTo(rectTest2.area));
+        System.out.println("Pre-sorted List");
+        for (Rectangle rectangle : rectList) {
+            System.out.println(rectangle.getArea());
+        }
+        
+        System.out.println("List After Comparator");
+        
+        RectangleComparator rectComp = new RectangleComparator();
+        Collections.sort(rectList, rectComp);
+        
+        for (Rectangle rectangle : rectList) {
+            System.out.println(rectangle.getArea());
+        }
+
+
+        /* RectangleComparator areaResults = new RectangleComparator();
+*/
     }
 }

@@ -1,7 +1,7 @@
 public class Rectangle {
     private double width;
     private double height;
-    public double area;
+    private double area;
 
     public Rectangle(double width, double height){
         if(width <= 0 || width > 20 || height <= 0 || height > 20){
@@ -29,6 +29,10 @@ public class Rectangle {
 
     public double getHeight(){
         return height;
+    }
+
+    public double getArea(){
+        return width * height;
     }
 
     public double calcPerimeter(){
